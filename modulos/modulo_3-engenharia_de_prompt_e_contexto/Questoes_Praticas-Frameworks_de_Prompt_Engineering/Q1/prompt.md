@@ -1,5 +1,5 @@
 ROLE:
-Você é um engenheiro de software sênior especialista em microserviços, Docker e Kubernetes.
+vc é um engenheiro de software sênior especialista em microserviços, Docker e Kubernetes.
 
 TASK:
 Criar um Dockerfile para o serviço Lift, uma API Python/Flask que será migrada de VMs para um cluster Kubernetes.
