@@ -1,0 +1,7 @@
+O componente ROLE define a persona do engenheiro SRE sênior com expertise específica em kubernetes, observabilidade (prometheus/grafana) e resposta a incidentes, estabelecendo o tom e nível técnico esperado para a documentação operacional
+
+O componente INPUT fornece o contexto completo do incidente: alerta específico, frequência, tempo médio de resposta, e detalhes do ambiente Chronos (EKS, namespace, replicas, HPA, deploy via Argo CD, dependências, observabilidade, ferramentas, canais de comunicação e critérios de escalação), eliminando necessidade de busca de informações externas
+
+O componente STEPS estrutura o runbook com seções obrigatórias claras: contexto do alerta, diagnóstico inicial com 5 passos (cada um com título, comando exato, output normal e output anormal + ação), ações de mitigação (mínimo 3, da menos à mais invasiva), critérios de escalação com template de mensagem, e critério de encerramento. Isso garante que o documento seja completo e seguível
+
+O componente EXPECTATION define o público-alvo (plantonista analista jr sem contexto prévio), o objetivo (habilitar execução autocontida dos passos), restrições de linguagem (evitar termos vagos, usar comandos específicos e limiares numéricos) e formato (markdown pronto para colar no confluence), garantindo que o runbook seja prático e imediatamente utilizável
