@@ -43,7 +43,7 @@ Usar cliente oficial Python (kubernetes/python-client).
 - Precisa implementar autenticação (token, cert, auth-provider)
 - Precisa implementar parsing de respostas
 - Precisa implementar retry e timeout
-- Complexidade muito alta
+- Complexidade alta
 
 **Decisão**: Rejeitado. Reimplementar autenticação, parsing, retry, timeout é trabalho desnecessário e propenso a erros. Cliente oficial já faz tudo isso.
 

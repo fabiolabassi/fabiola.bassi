@@ -71,9 +71,9 @@ Durante o desenvolvimento do dashboard (Ticket 04), as skills dos Tickets 01 (pa
 
 2. **Diferença entre YAML e API**: Skills focadas em manifests YAML não se aplicam bem a código que lê objetos da API. Precisa clareza sobre isso.
 
-3. **Explicação repetida é necessária**: Alguns conceitos (apenas leitura, contexto corrente) precisam ser explicados várias vezes para o agente entender completamente.
+3. **Explicação repetida é necessária**: Alguns conceitos (apenas leitura, contexto corrente) precisam ser explicados várias vezes para o agente entender.
 
-4. **Skills são úteis, mas não oniscientes**: Skills ajudam muito quando usadas no contexto correto, mas não entendem contexto de escrita de documentação vs código vs operação.
+4. **Skills são úteis, mas não oniscientes**: Skills ajudam quando usadas no contexto correto, mas não entendem contexto de escrita de documentação vs código vs operação.
 
 ## Impacto no Desenvolvimento
 

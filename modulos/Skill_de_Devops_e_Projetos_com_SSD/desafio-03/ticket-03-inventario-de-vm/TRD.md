@@ -155,7 +155,7 @@ def gerar_markdown(dados, conformidade):
 - **Sem timeout**: Vantagem: Simples. Desvantagem: Pode travar indefinidamente.
 - **Timeout curto (5s)**: Vantagem: Rápido. Desvantagem: Pode falhar em hosts lentos.
 
-**Justificativa**: 10s para conexão é razoável para redes corporativas. 30s para comando permite tempo suficiente para comandos como `systemctl list-units`. Se host está muito lento, 30s ainda é aceitável sem travar.
+**Justificativa**: 10s para conexão é razoável para redes corporativas. 30s para comando permite tempo para comandos como `systemctl list-units`. Se host está lento, 30s ainda é aceitável sem travar.
 
 ### 3.3 Detecção de Chaves da Plataforma
 **Decisão**: Verificar se chave tem comentário "platform@metacortex-platform" ou usar ssh-keygen -l para fingerprint e comparar com fingerprints conhecidos
@@ -164,7 +164,7 @@ def gerar_markdown(dados, conformidade):
 - **Verificar apenas comentário**: Vantagem: Simples. Desvantagem: Comentário pode não existir ou estar incorreto.
 - **Verificar fingerprint**: Vantagem: Mais confiável. Desvantagem: Requer banco de dados de fingerprints.
 
-**Justificativa**: Verificar comentário é simples e funciona para chaves emitidas pela plataforma com processo padronizado. Se o comentário não existir, reportar como "nao_verificado" ou "não foi possível determinar". Implementar banco de fingerprints seria overkill para MVP.
+**Justificativa**: Verificar comentário é simples e funciona para chaves emitidas pela plataforma com processo padronizado. Se o comentário não existir, reportar como "nao_verificado" ou "não foi possível determinar". Implementar banco de fingerprints seria excessivo para MVP.
 
 ### 3.4 Detecção de Portas
 **Decisão**: Usar `ss -tulpn` (socket statistics) para obter portas, bind address e processo

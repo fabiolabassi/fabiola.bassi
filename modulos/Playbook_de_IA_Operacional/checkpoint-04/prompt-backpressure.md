@@ -91,7 +91,7 @@ Apresente sua análise no seguinte formato:
 - [risco 2]: [mitigação]
 
 ## Instruções Adicionais
-- Não pule para a recomendação - mostre o trabalho de comparação.
+- Não pule para recomendação - mostre o trabalho de comparação.
 - Seja específico ao avaliar custo: "requer X instâncias adicionais de tipo Y, custo estimado de $Z/mês".
 - Seja honesto sobre trade-offs: toda solução tem prós e contras.
 - Se mais de uma abordagem for defensável, discuta as duas e justifique sua escolha.

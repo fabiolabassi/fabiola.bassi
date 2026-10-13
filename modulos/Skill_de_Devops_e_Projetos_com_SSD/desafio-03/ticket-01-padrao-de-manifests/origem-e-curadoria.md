@@ -5,7 +5,7 @@
 ### Fluxo de Criação
 A skill nasceu do seguinte fluxo:
 
-1. **Leitura do padrão**: Li o arquivo "Desafio 03 - Anexo - Padrao de Manifests da Metacortex.md" completamente, entendendo os 4 blocos (identidade, resiliência, segurança, vocabulário).
+1. **Leitura do padrão**: Li o arquivo "Desafio 03 - Anexo - Padrao de Manifests da Metacortex.md" por completo, entendendo os 4 blocos (identidade, resiliência, segurança, vocabulário).
 
 2. **Identificação de regras mecânicas vs manuais**: Analisei cada regra para determinar:
    - Regras mecânicas: podem ser verificadas automaticamente por script lendo apenas o YAML (ex: tag :latest, formato de namespace, seletor vs rótulos)
@@ -115,9 +115,9 @@ A skill precisa das seguintes permissões:
 **Decisão**: Usei Bash com yq para o script check-manifest.sh.
 
 **Alternativas consideradas**:
-- Python com PyYAML: Mais poderoso, mas exige dependência adicional
+- Python com PyYAML: Mais recursos, mas exige dependência adicional
 - Go com client-go: Overkill para validação simples de YAML
-- awk/sed puro: Muito frágil para parsing estruturado
+- awk/sed puro: Frágil para parsing estruturado
 
 **Justificativa**: Bash + yq é o padrão em ferramentas de DevOps (ex: scripts de Kubernetes), yq é amplamente usado para manipulação de YAML, e não requer dependência além do binário do yq.
 
@@ -129,7 +129,7 @@ A skill precisa das seguintes permissões:
 - Deixar tudo manual: Não aproveita o que pode ser automatizado
 - Misturar tudo sem distinção: Confuso para o usuário saber o que é automático vs manual
 
-**Justificativa**: A separação torna claro o que a skill faz automaticamente e o que exige intervenção humana. Isso melhora a experiência do usuário e evita falsas expectativas.
+**Justificativa**: A separação torna claro o que a skill faz automaticamente e o que exige intervenção humana. Isso melhora a experiência do usuário e evita expectativas incorretas.
 
 #### Por que Não Criei baseline-trivy.txt
 **Decisão**: Não criei arquivo separado com lista do que Trivy cobre.

@@ -105,10 +105,10 @@ O projeto nasceu do seguinte fluxo:
 **Decisão**: MVP suporta apenas um host por execução
 
 **Alternativas consideradas**:
-- Multithreading desde o início: Mais eficiente para auditoria de muitos hosts
+- Multithreading desde o início: Mais eficiente para auditoria de vários hosts
 - Multithreading futuro: Mais simples para MVP
 
-**Justificativa**: Multithreading adiciona complexidade significativa (gerenciamento de conexões SSH, sincronização, tratamento de erros paralelos). Para MVP, um host por execução é suficiente. Multithreading pode ser adicionado depois se necessário.
+**Justificativa**: Multithreading adiciona complexidade (gerenciamento de conexões SSH, sincronização, tratamento de erros paralelos). Para MVP, um host por execução é suficiente. Multithreading pode ser adicionado depois se necessário.
 
 #### Por que Não Implementar Integração com Roster em Tempo Real
 **Decisão**: Ferramenta gera arquivo JSON, Roster consome depois

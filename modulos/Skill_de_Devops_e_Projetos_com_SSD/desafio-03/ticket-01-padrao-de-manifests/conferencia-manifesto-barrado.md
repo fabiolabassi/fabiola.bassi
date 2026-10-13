@@ -156,4 +156,4 @@ spec:
 - **Cobertura check-manifest.sh**: 11 violações mecânicas
 - **Instruções manuais**: 6 regras que exigem verificação do projeto
 
-O manifesto precisa de correções substanciais antes de subir para o cluster.
+O manifesto precisa de correções antes de subir para o cluster.

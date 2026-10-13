@@ -20,7 +20,7 @@ Ver arquivo: `prompt-triagem-pods.md`
 ### PODS PROBLEMÁTICOS
 **Nome do Pod**: sentinel-api-7d9c8b6f4-h4m2t
 - **Status**: CrashLoopBackOff (14 restarts em 42m)
-- **Causa Provável**: OOMKilled - o pod está sendo terminado por falta de memória. Os logs mostram o heap chegando a 498Mi/512Mi antes do FATAL "out of memory". O limite de 512Mi é insuficiente para a carga atual do sentinel-api.
+- **Causa Provável**: OOMKilled - o pod está sendo terminado por falta de memória. Os logs mostram o heap chegando a 498Mi/512Mi antes do FATAL "out of memory". O limite de 512Mi é insuficiente para carga atual do sentinel-api.
 - **Ação Recomendada**: Aumentar o limite de memória do pod de 512Mi para pelo menos 768Mi ou 1Gi. Alternativamente, investigar memory leak na aplicação antes de escalar.
 
 ### RESUMO DA SITUAÇÃO
@@ -84,8 +84,8 @@ Todos os 4 pods estão com STATUS Running e operando normalmente. O sentinel-wor
 - **Role Prompting**: Defini o modelo como "engenheiro SRE com expertise em diagnósticos de clusters Kubernetes"
 
 ### Refinamentos feitos
-1. **Iteração 1**: Prompt inicial não enfatizava suficientemente a correlação entre as três fontes (get, describe, logs). Refinei adicionando instruções explícitas de "cruzar as informações" e "não repetir apenas o STATUS".
-2. **Iteração 2**: O formato de saída inicial era muito livre. Adicionei um template estruturado com seções fixas para consistência.
+1. **Iteração 1**: Prompt inicial não enfatizava a correlação entre as três fontes (get, describe, logs). Refinei adicionando instruções explícitas de "cruzar as informações" e "não repetir apenas o STATUS".
+2. **Iteração 2**: O formato de saída inicial era livre. Adicionei um template estruturado com seções fixas para consistência.
 3. **Iteração 3**: Adicionei exemplos de análise no próprio prompt para guiar o modelo, especialmente para casos de "causa raiz vs sintoma".
 4. **Iteração 4**: Adicionei instrução sobre cluster saudável para garantir que o modelo não invente problemas quando não há.
 

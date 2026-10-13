@@ -49,14 +49,14 @@
 - Processo: Ad-hoc - pode começar por Pods (saudáveis), por Service (existe), pode esquecer de verificar Endpoints
 - Tempo: ~60 segundos (mais tempo para descobrir o problema)
 - Qualidade: Baixa a Média - pode não verificar Endpoints, pode não comparar seletor vs rótulos, pode perder tempo em hipóteses erradas
-- Custo em tokens: ~3000 tokens (muito contexto e tentativas)
+- Custo em tokens: ~3000 tokens (contexto e tentativas)
 
 **Saída típica**: "Os pods estão saudáveis. Vou verificar o Service... O Service existe. Talvez seja um problema de rede. Vou verificar os logs dos pods... Os logs não mostram erro. Talvez seja DNS. Vou verificar a configuração..."
 
 **Comparação**:
-- **Qualidade**: Com skill é muito melhor - método garante que Endpoints seja verificado, o que é crítico para este caso
-- **Tempo**: Com skill é significativamente mais rápido (~25s vs ~60s) - método direto evita investigação desnecessária
-- **Custo**: Com skill é muito mais barato (~1200 vs ~3000 tokens) - menos tentativas e menos contexto desnecessário
+- **Qualidade**: Com skill é melhor - método garante que Endpoints seja verificado, o que é importante para este caso
+- **Tempo**: Com skill é mais rápido (~25s vs ~60s) - método direto evita investigação desnecessária
+- **Custo**: Com skill é mais barato (~1200 vs ~3000 tokens) - menos tentativas e menos contexto desnecessário
 
 ## Resumo da Comparação
 

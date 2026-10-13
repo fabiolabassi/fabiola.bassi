@@ -11,14 +11,14 @@
 - **JavaScript (React/Next.js)**: Vantagem: Ecossistema maduro de componentes UI. Desvantagem: Curva de aprendizado para time de infraestrutura, requer bundler/compilação.
 - **Python com Dash**: Vantagem: Similar ao Streamlit. Desvantagem: Menos popular para dashboards simples.
 
-**Justificativa**: Python é linguagem que time de infraestrutura já conhece (usado em Ticket 03). Streamlit é framework Python para dashboards que requer muito pouco código para UI, ideal para MVP. Time de infraestrutura pode manter facilmente.
+**Justificativa**: Python é linguagem que time de infraestrutura já conhece (usado em Ticket 03). Streamlit é framework Python para dashboards que requer pouco código para UI, ideal para MVP. Time de infraestrutura pode manter facilmente.
 
 ### 1.2 Como Falar com API do Kubernetes
 **Decisão**: Usar cliente oficial Python (kubernetes/python-client)
 
 **Alternativas consideradas**:
 - **kubectl como subprocesso**: Vantagem: Usa kubectl que time já conhece. Desvantagem: Parsing de saída YAML é frágil, performance pior, não há tipagem.
-- **HTTP direto com apiserver**: Vantagem: Máximo controle. Desvantagem: Precisa implementar autenticação, contexto, tipagem, muito complexo.
+- **HTTP direto com apiserver**: Vantagem: Máximo controle. Desvantagem: Precisa implementar autenticação, contexto, tipagem, complexo.
 
 **Justificativa**: Cliente oficial Python abstrai autenticação, contexto, tipagem e retry. É mantido pelo time do Kubernetes, maduro e estável. Parsing de objetos é nativo (objetos Python em vez de strings YAML).
 
@@ -29,7 +29,7 @@
 - **Consulta em intervalo fixo (polling)**: Vantagem: Tela sempre atualizada. Desvantagem: Carga constante no apiserver, desperdício se ninguém está olhando.
 - **Observação de mudanças (watch)**: Vantagem: Reativo, carga mínima. Desvantagem: Complexidade de implementação (gerenciar streams, reconexões), estado local complexo.
 
-**Justificativa**: Consulta sob demanda é mais simples de implementar e não impõe carga desnecessária no apiserver. Para ferramenta de triagem (plantão), refresh manual é suficiente - plantonista clica refresh quando precisa.
+**Justificativa**: Consulta sob demanda é mais simples de implementar e não impõe carga no apiserver. Para ferramenta de triagem (plantão), refresh manual é suficiente - plantonista clica refresh quando precisa.
 
 ### 1.4 Fonte dos Endpoints
 **Decisão**: EndpointSlice (Endpoints está sendo descontinuado)
@@ -38,7 +38,7 @@
 - **Endpoints**: Vantagem: Simples, amplamente usado. Desvantagem: Est sendo descontinuado pelo Kubernetes.
 - **EndpointSlice**: Vantagem: Futuro do Kubernetes, escalável. Desvantagem: Sintaxe diferente.
 
-**Justificativa**: O exercício menciona que Endpoints está sendo descontinuado. EndpointSlice é o futuro e continuará funcionando por muito tempo. Implementar com EndpointSlice desde o início evita migração no futuro.
+**Justificativa**: O exercício menciona que Endpoints está sendo descontinuado. EndpointSlice é o futuro e continuará funcionando. Implementar com EndpointSlice desde o início evita migração no futuro.
 
 ### 1.5 Recorte da Primeira Fatia
 **Decisão**: MVP inclui apenas o essencial: Namespaces, Pods, Deployments, Services, Events

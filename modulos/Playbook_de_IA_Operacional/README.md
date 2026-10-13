@@ -134,15 +134,15 @@ Suíte inteira roda a cada PR e push, independentemente de quais prompts foram a
 
 ## Aprendizados
 
-1. **Meta-prompting é poderoso**: Em vez de escrever prompts na mão, direcionar a IA para gerar e refinar prompts produz resultados melhores mais rápido.
+1. **Meta-prompting**: Em vez de escrever prompts na mão, direcionar a IA para gerar e refinar prompts produz resultados melhores mais rápido.
 
-2. **Parametrização é essencial**: Todo prompt deve ser parametrizável para ser reusável. Placeholders `{{variavel}}` permitem que qualquer pessoa use o mesmo prompt com dados diferentes.
+2. **Parametrização**: Todo prompt deve ser parametrizável para ser reusável. Placeholders `{{variavel}}` permitem que qualquer pessoa use o mesmo prompt com dados diferentes.
 
-3. **Testes são obrigatórios**: Prompt sem teste é prompt em que ninguém confia. Testes determinísticos (asserts) + LLM-as-judge (julgamento) cobrem diferentes tipos de saída.
+3. **Testes**: Prompt sem teste é prompt em que ninguém confia. Testes determinísticos (asserts) + LLM-as-judge (julgamento) cobrem diferentes tipos de saída.
 
 4. **Tratar prompt como código**: Versionamento, commits semânticos, pipeline de CI/CD - prompt deve ser tratado com o mesmo rigor que código de produção.
 
-5. **Iteração é normal**: O primeiro prompt raramente é perfeito. Processos de verificação e refino (como no CP06) são essenciais para qualidade.
+5. **Iteração**: O primeiro prompt raramente é perfeito. Processos de verificação e refino (como no CP06) são importantes para qualidade.
 
 ## Próximos Passos
 

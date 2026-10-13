@@ -22,7 +22,7 @@ Quando um recurso está em estado problemático, desça as camadas nesta ordem:
 5. **Service**: Ver se o Service tem Endpoints
 6. **Namespace**: Ver se há problemas no namespace (quota, NetworkPolicy)
 
-### Quando Cruzar Duas Fontes vs Aprofundar numa Só
+### Quando Cruzar Duas Fontes vs Aprofundar em Uma Só
 - **Cruzar quando**: O sintoma sugere correlação entre recursos (ex: "Service não entrega, mas pods estão saudáveis" → cruze Service + Endpoints)
 - **Aprofundar quando**: Um recurso tem múltiplos sintomas (ex: Pod com CrashLoopBackOff → aprofunde eventos + logs)
 

@@ -365,7 +365,7 @@ spec:
 ## Curadoria
 
 ### Técnica/Framework escolhido
-- **Iterative Refinement**: Usei um processo de verificação e refino em 3 iterações, onde cada versão endereça os pontos levantados pela verificação anterior. Isso é crucial para artefatos de segurança críticos como NetworkPolicy.
+- **Iterative Refinement**: Usei um processo de verificação e refino em 3 iterações, onde cada versão endereça os pontos levantados pela verificação anterior. Isso é importante para artefatos de segurança críticos como NetworkPolicy.
 - **Role-Based Critique**: Simulei a perspectiva de Natasha Romanoff (revisor de segurança) para identificar problemas que um revisor real encontraria.
 - **Precisão Técnica**: Exigi correção de sintaxe Kubernetes específica (namespaceSelector.matchNames vs labels de namespace).
 

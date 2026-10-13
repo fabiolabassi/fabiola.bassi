@@ -11,7 +11,7 @@ Usar Python 3.10+ com Streamlit para UI.
 
 ## Drivers
 - **Time de infraestrutura vai manter**: Python é linguagem já usada em Ticket 03 (auditor de VM), curva de aprendício menor
-- **Rapidez de desenvolvimento**: Streamlit permite criar dashboards com muito pouco código
+- **Rapidez de desenvolvimento**: Streamlit permite criar dashboards com pouco código
 - **Familiaridade com Python**: Time já usa Python para automação (Ansible, Terraform providers)
 - **Simplicidade de UI**: Streamlit abstrai HTML/CSS/JS, foca em Python
 
@@ -30,7 +30,7 @@ Usar Python 3.10+ com Streamlit para UI.
 - Desenvolvimento de UI mais complexo (duas linguagens: Go + JS)
 - Build e deploy mais complexos
 
-**Decisão**: Rejeitado. Time de infraestrutura já conhece Python e está usando em Ticket 03. O ganho de performance não é crítico para dashboard de triagem (latência de rede é fator dominante).
+**Decisão**: Rejeitado. Time de infraestrutura já conhece Python e está usando em Ticket 03. O ganho de performance não é importante para dashboard de triagem (latência de rede é fator dominante).
 
 ### A2: JavaScript (React/Next.js)
 **Descrição**: Usar JavaScript com React ou Next.js para UI

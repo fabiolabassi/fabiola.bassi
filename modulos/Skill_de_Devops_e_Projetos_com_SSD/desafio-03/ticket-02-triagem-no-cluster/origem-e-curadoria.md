@@ -10,7 +10,7 @@ A skill nasceu do seguinte fluxo:
 2. **Identificação de padrões de triagem**: Analisei cada chamado para identificar:
    - Como o problema se manifesta (sintoma)
    - Em que ordem as camadas devem ser verificadas
-   - Quando cruzar fontes vs aprofundar numa só
+   - Quando cruzar fontes vs aprofundar em uma só
    - Quando parar (causa identificada)
 
 3. **Definição do método**: Defini um método estruturado de triagem:
@@ -113,7 +113,7 @@ A skill garante modo não destrutivo de 3 formas:
 - Ordem adaptável: Deixar o agente decidir a ordem baseado no contexto
 - Ordem aleatória: Sem ordem definida
 
-**Justificativa**: Ordem fixa garante consistência e que nada seja esquecido. Ordem adaptável poderia deixar o agente pular partes importantes. Ordem fixa também é mais fácil de ensinar e seguir por humanos.
+**Justificativa**: Ordem fixa garante consistência e que nada seja esquecido. Ordem adaptável poderia deixar o agente pular partes importantes. Ordem fixa também é mais fácil de ensinar e seguir.
 
 #### Por que Não Incluí Verificação de Metrics
 **Decisão**: O método não inclui verificação de métricas (CPU, memória, latência).
@@ -132,4 +132,4 @@ A skill garante modo não destrutivo de 3 formas:
 - Fazer correção só com confirmação do usuário
 - Manter apenas leitura
 
-**Justificativa**: Correção automática é perigosa em produção - pode piorar o problema ou causar efeitos colaterais não previstos. O exercício exige "modo não destrutivo", o que reforça leitura apenas. Além disso, a triagem é diagnóstico, não correção - a decisão de corrigir cabe ao plantonista.
+**Justificativa**: Correção automática é perigosa em produção - pode piorar o problema ou causar efeitos colaterais. O exercício exige "modo não destrutivo", o que reforça leitura apenas. Além disso, a triagem é diagnóstico, não correção - a decisão de corrigir cabe ao plantonista.

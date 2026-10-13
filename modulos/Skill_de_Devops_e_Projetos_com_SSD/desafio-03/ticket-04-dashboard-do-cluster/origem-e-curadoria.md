@@ -74,14 +74,14 @@ O projeto nasceu do seguinte fluxo:
 - Go + React: Binário único, performance superior, mas curva de aprendizado mais íngreme para time de infraestrutura
 - JavaScript (React/Next.js): Ecossistema maduro, mas curva de aprendizado para time de infraestrutura
 
-**Justificativa**: Python é linguagem que time já conhece (usado em Ticket 03). Streamlit permite criar dashboards com muito pouco código. Time de infraestrutura pode manter facilmente.
+**Justificativa**: Python é linguagem que time já conhece (usado em Ticket 03). Streamlit permite criar dashboards com pouco código. Time de infraestrutura pode manter facilmente.
 
 #### Por que Cliente Oficial em Vez de kubectl Subprocesso
 **Decisão**: Cliente oficial Python (kubernetes/python-client) em vez de kubectl como subprocesso
 
 **Alternativas consideradas**:
 - kubectl subprocesso: Usa kubectl que time já conhece, mas parsing de YAML é frágil
-- HTTP direto: Máximo controle, mas complexidade muito alta
+- HTTP direto: Máximo controle, mas complexidade alta
 
 **Justificativa**: Cliente oficial abstrai autenticação, contexto, tipagem. Objetos Python são mais seguros que strings YAML. Parsing de YAML é frágil e propenso a erros.
 
@@ -92,7 +92,7 @@ O projeto nasceu do seguinte fluxo:
 - Polling: Tela sempre atualizada, mas carga constante no apiserver
 - Watch: Reativo, carga mínima, mas complexidade de implementação
 
-**Justificativa**: Refresh manual é mais simples e não impõe carga desnecessária. Para triagem, plantonista sabe quando precisa de dados atualizados.
+**Justificativa**: Refresh manual é mais simples e não impõe carga. Para triagem, plantonista sabe quando precisa de dados atualizados.
 
 #### Por que EndpointSlice em Vez de Endpoints
 **Decisão**: EndpointSlice em vez de Endpoints
@@ -101,7 +101,7 @@ O projeto nasceu do seguinte fluxo:
 - Endpoints: Simples, mas está sendo descontinuado
 - EndpointSlice: Futuro do Kubernetes, escalável
 
-**Justificativa**: O exercício menciona que Endpoints está sendo descontinuado. EndpointSlice é o futuro e continuará funcionando por muito tempo.
+**Justificativa**: O exercício menciona que Endpoints está sendo descontinuado. EndpointSlice é o futuro e continuará funcionando.
 
 #### Por que Recorte Limitado a 5 Recursos
 **Decisão**: MVP inclui apenas Namespaces, Pods, Deployments, Services, Events

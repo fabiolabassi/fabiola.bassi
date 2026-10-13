@@ -1,7 +1,7 @@
 # Ticket 01 - Skill do Padrão de Manifests
 
 ## Objetivo
-Empacotar o padrão de manifests da Metacortex numa skill que pode:
+Empacotar o padrão de manifests da Metacortex em uma skill que pode:
 - **Modo escrita**: Gerar manifests novos já dentro do padrão
 - **Modo conferência**: Apontar violações em manifest existentes
 

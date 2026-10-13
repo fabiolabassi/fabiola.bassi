@@ -481,7 +481,7 @@ Com encadeamento:
 
 ### Refinamentos feitos
 1. **Iteração 1**: Prompt 1 inicial não tinha seção "Gaps de Conhecimento". Adicionei para que o modelo identificasse o que não sabe, permitindo que prompts posteriores façam suposições explícitas.
-2. **Iteração 2**: Prompt 2 não enfatizava sufficiently reversibilidade. Adicionei instrução "A reversibilidade não é opcional" e exigir rollback plan para cada etapa.
+2. **Iteração 2**: Prompt 2 não enfatizava reversibilidade. Adicionei instrução "A reversibilidade não é opcional" e exigir rollback plan para cada etapa.
 3. **Iteração 3**: Prompt 3 não era específico o suficiente nas ações. Adicionei instrução "Seja específico nas ações - 'fazer X' é vago, 'rodar kubectl apply' é específico".
 4. **Iteração 4**: Adicionei seção "Estratégia de Rollback Geral" no Prompt 3 para fornecer um safety net além dos rollbacks individuais.
 

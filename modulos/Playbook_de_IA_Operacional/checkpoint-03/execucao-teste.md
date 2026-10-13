@@ -132,7 +132,7 @@ Os artefatos não permitem determinar com certeza POR QUE o job de reindexação
 - **Requisito de Evidência**: Exigi que o modelo cite trechos específicos dos logs e correlações entre artefatos, reduzindo alucinação.
 
 ### Refinamentos feitos
-1. **Iteração 1**: Prompt inicial não enfatizava sufficiently a distinção entre causa e consequência. Adicionei seção específica "Distinguir causa de consequência" com exemplos.
+1. **Iteração 1**: Prompt inicial não enfatizava a distinção entre causa e consequência. Adicionei seção específica "Distinguir causa de consequência" com exemplos.
 2. **Iteração 2**: O modelo estava listando problemas sem construir narrativa cronológica. Adicionei seção "Análise Cronológica" exigindo horários específicos.
 3. **Iteração 3**: O modelo não estava citando evidências dos 3 artefatos. Adicionei instrução explícita de "Cite trechos específicos dos logs quando relevante" e seção "Correlação Entre Artefatos".
 4. **Iteração 4**: Adicionei seção "Incertezas e Limitações" para incentivar honestidade epistêmica - o modelo deve admitir o que não sabe.
