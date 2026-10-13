@@ -85,8 +85,8 @@ Se **nenhuma** categoria existente casar bem, propor categoria nova:
 
 Gerar slug kebab-case descrevendo **o resultado** do prompt, não a técnica.
 
-- ✅ `revisar-pull-request`, `gerar-email-follow-up`, `planejar-sprint`.
-- ❌ `prompt-chain-of-thought`, `few-shot-exemplo`, `template-revisao`.
+- `revisar-pull-request`, `gerar-email-follow-up`, `planejar-sprint`.
+- `prompt-chain-of-thought`, `few-shot-exemplo`, `template-revisao`.
 
 ### A7. Verificar duplicidade
 

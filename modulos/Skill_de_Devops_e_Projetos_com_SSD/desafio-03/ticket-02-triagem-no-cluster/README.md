@@ -60,4 +60,4 @@ Loja do fake-shop parou após deploy do Loom. Pod nunca foi substituído.
 kube-news responde 503. Aplicação saudável, mas não alcançável.
 
 ## Status
-✅ Completo
+Completo

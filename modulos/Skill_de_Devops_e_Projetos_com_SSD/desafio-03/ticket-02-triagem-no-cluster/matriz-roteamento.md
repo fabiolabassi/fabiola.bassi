@@ -55,18 +55,18 @@ Testar qual skill dispara para cada frase, com as skills dos Tickets 01 (padrão
 
 ## Resumo da Matriz
 
-| Frase | Skill Disparada | Correto? | Ação |
-|-------|----------------|----------|------|
-| "o pod do nyx-prod não sobe" | Triagem (T02) | ✅ | Nenhuma |
-| "por que esse deployment está 0/3" | Triagem (T02) | ✅ | Nenhuma |
-| "o service do nyx-stg não tem endpoint" | Triagem (T02) | ✅ | Nenhuma |
-| "revisa esse deployment antes de eu subir" | Padrão de manifests (T01) | ✅ | Nenhuma |
-| "esse manifesto está no padrão da casa?" | Padrão de manifests (T01) | ✅ | Nenhuma |
-| "cria um Deployment novo do zero pra mim" | Triagem (T02) | ❌ | Nenhuma - fora de escopo |
-| "esse manifesto não sobe no cluster" | Triagem (T02) | ⚠️ | Aceitável - triagem é ponto de partida razoável |
-| "o Service do nyx não está entregando tráfego" | Triagem (T02) | ✅ | Nenhuma |
-| "o que é um DaemonSet?" | Nenhuma | ✅ | Nenhuma - fora de escopo |
-| "provisiona uma VM nova no Construct" | Nenhuma | ✅ | Nenhuma - fora de escopo |
+|| Frase | Skill Disparada | Correto? | Ação |
+||-------|----------------|----------|------|
+|| "o pod do nyx-prod não sobe" | Triagem (T02) | Sim | Nenhuma |
+|| "por que esse deployment está 0/3" | Triagem (T02) | Sim | Nenhuma |
+|| "o service do nyx-stg não tem endpoint" | Triagem (T02) | Sim | Nenhuma |
+|| "revisa esse deployment antes de eu subir" | Padrão de manifests (T01) | Sim | Nenhuma |
+|| "esse manifesto está no padrão da casa?" | Padrão de manifests (T01) | Sim | Nenhuma |
+|| "cria um Deployment novo do zero pra mim" | Triagem (T02) | Não | Nenhuma - fora de escopo |
+|| "esse manifesto não sobe no cluster" | Triagem (T02) | Parcial | Aceitável - triagem é ponto de partida razoável |
+|| "o Service do nyx não está entregando tráfego" | Triagem (T02) | Sim | Nenhuma |
+|| "o que é um DaemonSet?" | Nenhuma | Sim | Nenhuma - fora de escopo |
+|| "provisiona uma VM nova no Construct" | Nenhuma | Sim | Nenhuma - fora de escopo |
 
 ## Mudanças Feitas
 

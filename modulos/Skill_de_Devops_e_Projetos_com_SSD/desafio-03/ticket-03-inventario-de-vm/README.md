@@ -94,4 +94,4 @@ Construir ferramenta CLI que audita VM por SSH e compara com baseline do parque 
 - Código de saída utilizável em pipeline
 
 ## Status
-✅ Completo (spec + código simulado - não testado contra host real)
+Completo (spec + código simulado - não testado contra host real)
