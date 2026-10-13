@@ -1,6 +1,5 @@
 ## Modelo utilizado
+Provider: Claude 3.5
+Modelo: Sonnet Anthropic
 
-Provider: ChatGPT
-Modelo: GPT-4
-
-Escolhido pela capacidade de escrever scripts bash robustos com boas práticas de DevOps, tratamento de erros e automação de backups PostgreSQL em ambientes AWS
+Excelente histórico em lidar com sintaxe bash, tratamento de código e comandos específicos da aws
