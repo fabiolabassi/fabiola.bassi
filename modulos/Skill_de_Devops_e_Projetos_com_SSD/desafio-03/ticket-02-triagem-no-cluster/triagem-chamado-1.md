@@ -59,4 +59,4 @@ kubectl describe pod nyx-api-xxx -n nyx-prod | grep -A 5 "Limits:"
 Aumentar o memory limit do container da API para um valor adequado (ex: 256Mi ou 512Mi) no Deployment. Verificar no projeto kube-news qual é o consumo de memória típico em regime e definir limit entre 1.5x e 2x desse valor.
 
 ## Status da Triagem
-✅ **CAUSA IDENTIFICADA** - OOMKilled por limite de memória insuficiente após corte de custos
+**CAUSA IDENTIFICADA** - OOMKilled por limite de memória insuficiente após corte de custos

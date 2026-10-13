@@ -61,16 +61,16 @@ O assert de JavaScript extrai a nota total da saída do juiz e verifica se é �
 2. **Execução do Juiz**: Rodei o juiz LLM contra as mesmas 3 saídas.
 
 3. **Comparação**:
-   - Saída A: Juiz deu 8/8 (diferença 0) ✓
-   - Saída B: Juiz deu 7/8 (diferença +1) ✓
-   - Saída C: Juiz deu 4/8 (diferença 0) ✓
+   - Saída A: Juiz deu 8/8 (diferença 0) ok
+   - Saída B: Juiz deu 7/8 (diferença +1) ok
+   - Saída C: Juiz deu 4/8 (diferença 0) ok
 
 4. **Ajuste do Prompt do Juiz**: A diferença de +1 na Saída B estava no critério "Correlação × causa" - o juiz foi mais generoso que eu. Ajustei a rubrica para ser mais explícita sobre o que constitui 2 pontos vs 1 ponto neste critério.
 
 5. **Segunda Calibração**: Após o ajuste:
-   - Saída A: Juiz deu 8/8 (diferença 0) ✓
-   - Saída B: Juiz deu 6/8 (diferença 0) ✓
-   - Saída C: Juiz deu 4/8 (diferença 0) ✓
+   - Saída A: Juiz deu 8/8 (diferença 0) ok
+   - Saída B: Juiz deu 6/8 (diferença 0) ok
+   - Saída C: Juiz deu 4/8 (diferença 0) ok
 
 **Resultado**: O juiz está calibrado com diferença máxima de 0 pontos em relação à minha pontuação.
 
@@ -93,14 +93,14 @@ promptfoo eval -c devops/causa-raiz-cerebro/promptfooconfig.yaml
 
 ### Resultado
 ```
-✓ Test 1 (artefatos do Cerebro) - PASS
-  - LLM-rubric: nota total 8/8 ✓
+Test 1 (artefatos do Cerebro) - PASS
+  - LLM-rubric: nota total 8/8 ok
     - Causa-raiz correta: 2/2
     - Correlação × causa: 2/2
     - Ação proporcional: 2/2
     - Honestidade epistêmica: 2/2
     Justificativa: A saída identifica corretamente a reindexação travada como causa-raiz, distingue claramente causa de consequência, propõe ação proporcional (interromper reindexação) e reconhece limitações sobre por que o job está lento.
-  - Javascript: score >= 6 ✓
+  - Javascript: score >= 6 ok
 
 Provider: openai:gpt-4o-mini - 1/1 tests passed
 Provider: anthropic:claude-3-5-sonnet-20241022 - 1/1 tests passed

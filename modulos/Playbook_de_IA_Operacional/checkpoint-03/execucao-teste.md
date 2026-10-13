@@ -147,10 +147,10 @@ Os artefatos contêm:
 
 ### Avaliação final
 O prompt satisfaz os requisitos:
-- ✓ Parametrizável (recebe {{config_cerebro}}, {{metricas_cerebro}}, {{logs_cerebro}})
-- ✓ Correlaciona os 3 artefatos para chegar à causa-raiz
-- ✓ Distingue causa de consequência (não lista apenas sintomas)
-- ✓ Cita evidências específicas dos artefatos
-- ✓ Propõe ação proporcional ao diagnóstico
-- ✓ Reconhece incertezas e limitações
-- ✓ Saída estruturada e legível
+- Parametrizável (recebe {{config_cerebro}}, {{metricas_cerebro}}, {{logs_cerebro}})
+- Correlaciona os 3 artefatos para chegar à causa-raiz
+- Distingue causa de consequência (não lista apenas sintomas)
+- Cita evidências específicas dos artefatos
+- Propõe ação proporcional ao diagnóstico
+- Reconhece incertezas e limitações
+- Saída estruturada e legível

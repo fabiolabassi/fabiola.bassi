@@ -82,4 +82,4 @@ kubectl get deployment nyx-api -n nyx-stg -o yaml | grep -A 3 template.metadata.
 Corrigir o seletor do Service para `app: nyxapi` para casar com os rótulos dos Pods definidos no Deployment. Aplicar kubectl apply com o Service corrigido.
 
 ## Status da Triagem
-✅ **CAUSA IDENTIFICADA** - Mismatch de seletor do Service vs rótulos do Pod (nyx-api vs nyxapi)
+**CAUSA IDENTIFICADA** - Mismatch de seletor do Service vs rótulos do Pod (nyx-api vs nyxapi)

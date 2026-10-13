@@ -6,10 +6,10 @@ Desafio completo com 4 tickets envolvendo skills de Kubernetes, triagem de clust
 
 ## Tickets
 
-- [Ticket 01 - Skill do Padrão de Manifests](./ticket-01-padrao-de-manifests/) ✅ Completo - Skill que empacota o padrão de manifests da Metacortex
-- [Ticket 02 - Skill de Triagem de Cluster](./ticket-02-triagem-no-cluster/) ✅ Completo - Skill de triagem usando mcp-server-kubernetes
-- [Ticket 03 - Inventário de VM por SSH](./ticket-03-inventario-de-vm/) ✅ Completo (spec + código simulado) - Ferramenta CLI de auditoria de VM
-- [Ticket 04 - Dashboard do Cluster](./ticket-04-dashboard-do-cluster/) ✅ Completo (spec apenas) - Aplicação local de visualização do cluster
+- [Ticket 01 - Skill do Padrão de Manifests](./ticket-01-padrao-de-manifests/) Completo - Skill que empacota o padrão de manifests da Metacortex
+- [Ticket 02 - Skill de Triagem de Cluster](./ticket-02-triagem-no-cluster/) Completo - Skill de triagem usando mcp-server-kubernetes
+- [Ticket 03 - Inventário de VM por SSH](./ticket-03-inventario-de-vm/) Completo (spec + código simulado) - Ferramenta CLI de auditoria de VM
+- [Ticket 04 - Dashboard do Cluster](./ticket-04-dashboard-do-cluster/) Completo (spec apenas) - Aplicação local de visualização do cluster
 
 ## Agente e Modelos
 

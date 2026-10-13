@@ -82,7 +82,7 @@ jobs:
                   }
                 }
 
-                const status = failCount === 0 ? '✅ PASS' : '❌ FAIL';
+                const status = failCount === 0 ? 'PASS' : 'FAIL';
                 comment += `### ${prompt.name}: ${status} (${passCount}/${passCount + failCount})\n\n`;
 
                 if (failCount > 0) {

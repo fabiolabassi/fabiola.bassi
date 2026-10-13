@@ -155,4 +155,4 @@ A aplicação precisa tratar sem tela em branco nem stack trace:
 - Skills dos Tickets 01 e 02 instaladas
 
 ## Status
-✅ Completo (spec apenas - código não implementado)
+Completo (spec apenas - código não implementado)

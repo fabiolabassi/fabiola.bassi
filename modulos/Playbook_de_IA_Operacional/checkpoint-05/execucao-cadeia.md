@@ -494,9 +494,9 @@ O cenário contém:
 
 ### Avaliação final
 A cadeia satisfaz os requisitos:
-- ✓ Cada prompt é parametrizável (recebe saída do anterior)
-- ✓ A migração é quebrada em etapas (não big-bang)
-- ✓ Cada etapa é reversível
-- ✓ Quem depende do Forge continua funcionando durante transição
-- ✓ O plano é executável (ações específicas, métricas, rollback)
-- ✓ O raciocínio é progressivo (diagnóstico → planejamento → execução)
+- Cada prompt é parametrizável (recebe saída do anterior)
+- A migração é quebrada em etapas (não big-bang)
+- Cada etapa é reversível
+- Quem depende do Forge continua funcionando durante transição
+- O plano é executável (ações específicas, métricas, rollback)
+- O raciocínio é progressivo (diagnóstico → planejamento → execução)

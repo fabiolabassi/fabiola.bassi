@@ -167,11 +167,11 @@ O cenário contém:
 
 ### Avaliação final
 O prompt satisfaz os requisitos:
-- ✓ Parametrizável (recebe {{cenario_relay}})
-- ✓ Compara múltiplas abordagens (4 abordagens listadas)
-- ✓ Pesa prós e contras de cada uma
-- ✓ Avalia contra restrições (SLAs, custo, perda de dados)
-- ✓ Não cuspe resposta única - mostra processo de decisão
-- ✓ Inclui análise de combinações
-- ✓ Justifica abordagens descartadas
-- ✓ Recomenda com justificativa detalhada
+- Parametrizável (recebe {{cenario_relay}})
+- Compara múltiplas abordagens (4 abordagens listadas)
+- Pesa prós e contras de cada uma
+- Avalia contra restrições (SLAs, custo, perda de dados)
+- Não cuspe resposta única - mostra processo de decisão
+- Inclui análise de combinações
+- Justifica abordagens descartadas
+- Recomenda com justificativa detalhada

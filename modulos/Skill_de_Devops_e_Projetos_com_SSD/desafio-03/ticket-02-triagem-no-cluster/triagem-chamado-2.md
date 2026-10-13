@@ -66,4 +66,4 @@ kubectl rollout history deployment/orion-web -n orion-stg
 Atualizar o manifesto do Deployment com a nova tag de imagem e aplicar kubectl apply. Verificar se a tag nova existe no registry do Loom. Se não existir, o problema é no processo de release do Loom, não no deploy.
 
 ## Status da Triagem
-✅ **CAUSA IDENTIFICADA** - Manifesto não atualizado com nova tag de imagem, pods nunca substituídos
+**CAUSA IDENTIFICADA** - Manifesto não atualizado com nova tag de imagem, pods nunca substituídos

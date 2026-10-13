@@ -186,7 +186,7 @@ Escalar para @chronos-core em #oncall-chronos quando:
 
 **Template de mensagem:**
 ```
-@chronos-core ⚠️ ESCALAÇÃO REQUIRED
+@chronos-core ESCALAÇÃO REQUIRED
 
 Alerta: High memory usage on Chronos API pods
 Situação: [descrever brevemente - ex: 6 pods com memória > 90%, HPA no máximo]

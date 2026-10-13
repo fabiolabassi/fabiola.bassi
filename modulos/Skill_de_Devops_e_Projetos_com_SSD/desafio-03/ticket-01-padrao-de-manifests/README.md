@@ -60,4 +60,4 @@ Empacotar o padrão de manifests da Metacortex em uma skill que pode:
 - Imagem só de registry interno
 
 ## Status
-✅ Completo
+Completo

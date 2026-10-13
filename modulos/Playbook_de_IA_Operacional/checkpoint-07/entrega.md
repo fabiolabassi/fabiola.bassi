@@ -93,9 +93,9 @@ Prompt para triagem rápida e confiável da saúde de pods em um cluster Kuberne
 ### 2. Nomenclatura de Pastas
 - Segui a regra: nomear pelo **resultado**, não pela técnica
 - Exemplos:
-  - `triagem-de-pods` (resultado) ✓ vs `chain-of-thought-pods` (técnica) ✗
-  - `nota-de-triagem` (resultado) ✓ vs `few-shot-triagem` (técnica) ✗
-  - `backpressure-relay` (resultado) ✓ vs `comparacao-approaches` (técnica) ✗
+  - `triagem-de-pods` (resultado) ok vs `chain-of-thought-pods` (técnica) erro
+  - `nota-de-triagem` (resultado) ok vs `few-shot-triagem` (técnica) erro
+  - `backpressure-relay` (resultado) ok vs `comparacao-approaches` (técnica) erro
 - Usei kebab-case conforme o template
 
 ### 3. Frontmatter
@@ -145,12 +145,12 @@ Cada README documenta que é parte de uma cadeia e explica a ordem de uso.
 
 ### Conformidade com CLAUDE.md
 O repositório segue todas as regras do `CLAUDE.md` do template:
-- ✓ Estrutura obrigatória (categoria/prompt/prompt.md + README.md)
-- ✓ Frontmatter padrão com todos os campos obrigatórios
-- ✓ Placeholders em formato {{nome_variavel}}
-- ✓ Documentação mantida atualizada (READMEs de categoria e raiz)
-- ✓ Nomenclatura pelo resultado, não pela técnica
-- ✓ Texto do prompt autocontido
+- Estrutura obrigatória (categoria/prompt/prompt.md + README.md)
+- Frontmatter padrão com todos os campos obrigatórios
+- Placeholders em formato {{nome_variavel}}
+- Documentação mantida atualizada (READMEs de categoria e raiz)
+- Nomenclatura pelo resultado, não pela técnica
+- Texto do prompt autocontido
 
 ## Próximos Passos (Checkpoints 08-10)
 - CP08: Adicionar testes promptfoo para prompts de saída estruturada
