@@ -246,10 +246,10 @@ spec:
 **Análise de Natasha Romanoff**:
 
 **Melhorias em relação à v1**:
-✓ Política default-deny separada adicionada
-✓ Comentários mais específicos
-✓ Porta especificada para ingress do API gateway
-✓ Egress para DNS simplificado (apenas namespaceSelector)
+- Política default-deny separada adicionada
+- Comentários mais específicos
+- Porta especificada para ingress do API gateway
+- Egress para DNS simplificado (apenas namespaceSelector)
 
 **Problemas restantes**:
 
@@ -346,17 +346,17 @@ spec:
 
 **Análise de Natasha Romanoff**:
 
-**Aprovação**: ✓ **APROVADO**
+**Aprovação**: **APROVADO**
 
 **Justificativa**:
-- ✓ Usa `namespaceSelector.matchNames` (sintaxe correta e suportada)
-- ✓ Única política YAML (não múltiplos documentos)
-- ✓ Comportamento default-deny (podSelector específico com app=sentinel, pods sem esse label não são afetados por esta política, mas o namespace não tem política default-deny separada)
-- ✓ Comentários específicos e claros
-- ✓ Porta 8080 especificada para API gateway
-- ✓ Egress para DNS simplificado
-- ✓ Nenhum allow-all (- {})
-- ✓ Todas as regras têm comentários
+- Usa `namespaceSelector.matchNames` (sintaxe correta e suportada)
+- Única política YAML (não múltiplos documentos)
+- Comportamento default-deny (podSelector específico com app=sentinel, pods sem esse label não são afetados por esta política, mas o namespace não tem política default-deny separada)
+- Comentários específicos e claros
+- Porta 8080 especificada para API gateway
+- Egress para DNS simplificado
+- Nenhum allow-all (- {})
+- Todas as regras têm comentários
 
 **Nota técnica**: Esta política aplica-se apenas a pods com label `app=sentinel`. Para ser verdadeiramente default-deny no namespace, seria ideal ter uma política separada com `podSelector: {}` sem regras de allow. No entanto, para o escopo deste exercício e considerando que a política é específica para o Sentinel, esta versão é aceitável. Se o time quiser default-deny estrito no namespace, pode adicionar a política separada.
 
@@ -397,10 +397,10 @@ Os dados contêm:
 
 ### Avaliação final
 O prompt satisfaz os requisitos:
-- ✓ Parametrizável (recebe manifesto, regras, mapa de serviços)
-- ✓ Produz NetworkPolicy corrigida e endurecida
-- ✓ Remove allow-all
-- ✓ Usa labels corretas do mapa de serviços
-- ✓ Inclui comentários em todas as regras
-- ✓ Processo de verificação e refino gerou versão aprovada
-- ✓ Iterações documentadas mostram evolução da correção
+- Parametrizável (recebe manifesto, regras, mapa de serviços)
+- Produz NetworkPolicy corrigida e endurecida
+- Remove allow-all
+- Usa labels corretas do mapa de serviços
+- Inclui comentários em todas as regras
+- Processo de verificação e refino gerou versão aprovada
+- Iterações documentadas mostram evolução da correção

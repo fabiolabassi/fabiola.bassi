@@ -98,9 +98,9 @@ Os snapshots contêm:
 
 ### Avaliação final
 O prompt satisfaz os requisitos:
-- ✓ Parametrizável (recebe {{snapshot_cluster}})
-- ✓ Identifica pods problemáticos
-- ✓ Determina causa provável cruzando status + eventos + logs
-- ✓ Recomenda ação específica
-- ✓ Reconhece quando não há problemas
-- ✓ Saída legível e estruturada
+- Parametrizável (recebe {{snapshot_cluster}})
+- Identifica pods problemáticos
+- Determina causa provável cruzando status + eventos + logs
+- Recomenda ação específica
+- Reconhece quando não há problemas
+- Saída legível e estruturada

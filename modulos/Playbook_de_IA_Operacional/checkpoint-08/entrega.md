@@ -49,22 +49,22 @@ promptfoo eval
 
 #### nota-de-triagem
 ```
-✓ Test 1 (autoscaler hit max replicas) - PASS
-  - Contains: ALERTA: ✓
-  - Contains: IMPACTO: ✓
-  - Contains: HIPÓTESE INICIAL: ✓
-  - Contains: AÇÃO IMEDIATA: ✓
-  - Contains: ESCALAR PARA: ✓
-  - Regex: ESCALAR PARA:.*@\w+ ✓
-  - Javascript: output.split('\n').length <= 8 ✓
-  - Latency: 4.2s (limit 5s) ✓
-  - Cost: $0.008 (limit $0.01) ✓
+Test 1 (autoscaler hit max replicas) - PASS
+  - Contains: ALERTA: ok
+  - Contains: IMPACTO: ok
+  - Contains: HIPÓTESE INICIAL: ok
+  - Contains: AÇÃO IMEDIATA: ok
+  - Contains: ESCALAR PARA: ok
+  - Regex: ESCALAR PARA:.*@\w+ ok
+  - Javascript: output.split('\n').length <= 8 ok
+  - Latency: 4.2s (limit 5s) ok
+  - Cost: $0.008 (limit $0.01) ok
 
-✓ Test 2 (ingest reject rate) - PASS
-  - Todos os asserts passaram ✓
+Test 2 (ingest reject rate) - PASS
+  - Todos os asserts passaram ok
 
-✓ Test 3 (consumer lag) - PASS
-  - Todos os asserts passaram ✓
+Test 3 (consumer lag) - PASS
+  - Todos os asserts passaram ok
 
 Provider: openai:gpt-4o-mini - 3/3 tests passed
 Provider: anthropic:claude-3-5-sonnet-20241022 - 3/3 tests passed
@@ -72,29 +72,29 @@ Provider: anthropic:claude-3-5-sonnet-20241022 - 3/3 tests passed
 
 #### triagem-de-pods
 ```
-✓ Test 1 (OOMKilled) - PASS
-  - Contains: sentinel-api-7d9c8b6f4-h4m2t ✓
-  - Contains: OOMKilled ✓
-  - Javascript: output.includes('memória') || output.includes('memory') ✓
-  - Latency: 4.8s (limit 5s) ✓
-  - Cost: $0.009 (limit $0.01) ✓
+Test 1 (OOMKilled) - PASS
+  - Contains: sentinel-api-7d9c8b6f4-h4m2t ok
+  - Contains: OOMKilled ok
+  - Javascript: output.includes('memória') || output.includes('memory') ok
+  - Latency: 4.8s (limit 5s) ok
+  - Cost: $0.009 (limit $0.01) ok
 
-✓ Test 2 (ImagePullBackOff + Pending) - PASS
-  - Contains: sentinel-api-7d9c8b6f4-zzp10 ✓
-  - Contains: 2.9.2 ✓
-  - Contains: ImagePullBackOff ✓
-  - Contains: sentinel-ingest-8f7a9c5b-4dkqm ✓
-  - Contains: Insufficient ✓
-  - Javascript: output.includes('cpu') || output.includes('CPU') ✓
-  - Latency: 4.5s (limit 5s) ✓
-  - Cost: $0.009 (limit $0.01) ✓
+Test 2 (ImagePullBackOff + Pending) - PASS
+  - Contains: sentinel-api-7d9c8b6f4-zzp10 ok
+  - Contains: 2.9.2 ok
+  - Contains: ImagePullBackOff ok
+  - Contains: sentinel-ingest-8f7a9c5b-4dkqm ok
+  - Contains: Insufficient ok
+  - Javascript: output.includes('cpu') || output.includes('CPU') ok
+  - Latency: 4.5s (limit 5s) ok
+  - Cost: $0.009 (limit $0.01) ok
 
-✓ Test 3 (saudável) - PASS
-  - Contains: saudável ✓
-  - Contains: Nenhum pod problemático ✓
-  - Javascript: !output.includes('CrashLoopBackOff') && !output.includes('ImagePullBackOff') && !output.includes('Pending') ✓
-  - Latency: 3.2s (limit 5s) ✓
-  - Cost: $0.007 (limit $0.01) ✓
+Test 3 (saudável) - PASS
+  - Contains: saudável ok
+  - Contains: Nenhum pod problemático ok
+  - Javascript: !output.includes('CrashLoopBackOff') && !output.includes('ImagePullBackOff') && !output.includes('Pending') ok
+  - Latency: 3.2s (limit 5s) ok
+  - Cost: $0.007 (limit $0.01) ok
 
 Provider: openai:gpt-4o-mini - 3/3 tests passed
 Provider: anthropic:claude-3-5-sonnet-20241022 - 3/3 tests passed
@@ -102,16 +102,16 @@ Provider: anthropic:claude-3-5-sonnet-20241022 - 3/3 tests passed
 
 #### networkpolicy-sentinel
 ```
-✓ Test 1 (manifesto permissivo) - PASS
-  - Is JSON (YAML válido) ✓
-  - Javascript: JSON.parse(output).kind === 'NetworkPolicy' ✓
-  - Javascript: policyTypes includes Ingress and Egress ✓
-  - Not-contains: - {} ✓
-  - Javascript: output.includes('5432') && output.includes('9200') ✓
-  - Javascript: output.includes('app:relay') ✓
-  - Contains: # ✓
-  - Latency: 4.1s (limit 5s) ✓
-  - Cost: $0.008 (limit $0.01) ✓
+Test 1 (manifesto permissivo) - PASS
+  - Is JSON (YAML válido) ok
+  - Javascript: JSON.parse(output).kind === 'NetworkPolicy' ok
+  - Javascript: policyTypes includes Ingress and Egress ok
+  - Not-contains: - {} ok
+  - Javascript: output.includes('5432') && output.includes('9200') ok
+  - Javascript: output.includes('app:relay') ok
+  - Contains: # ok
+  - Latency: 4.1s (limit 5s) ok
+  - Cost: $0.008 (limit $0.01) ok
 
 Provider: openai:gpt-4o-mini - 1/1 tests passed
 Provider: anthropic:claude-3-5-sonnet-20241022 - 1/1 tests passed
@@ -121,9 +121,9 @@ Provider: anthropic:claude-3-5-sonnet-20241022 - 1/1 tests passed
 
 ### O que Passou
 Todos os testes passaram em ambos os providers (GPT-4o-mini e Claude 3.5 Sonnet):
-- ✓ nota-de-triagem: 3/3 testes, todos os asserts
-- ✓ triagem-de-pods: 3/3 testes, todos os asserts
-- ✓ networkpolicy-sentinel: 1/1 teste, todos os asserts
+- nota-de-triagem: 3/3 testes, todos os asserts
+- triagem-de-pods: 3/3 testes, todos os asserts
+- networkpolicy-sentinel: 1/1 teste, todos os asserts
 
 ### O que Falhou
 Nenhum teste falhou na execução simulada.

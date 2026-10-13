@@ -102,9 +102,9 @@ Os alertas crus contêm:
 
 ### Avaliação final
 O prompt satisfaz os requisitos:
-- ✓ Parametrizável (recebe {{alerta_cru}})
-- ✓ Produz nota com 5 campos obrigatórios
-- ✓ Formato padronizado (ALERTA, IMPACTO, HIPÓTESE INICIAL, AÇÃO IMEDIATA, ESCALAR PARA)
-- ✓ Contém @handle no campo de escalonamento
-- ✓ Conciso (no máximo 8 linhas)
-- ✓ Infere impacto, hipótese e ação a partir do alerta cru
+- Parametrizável (recebe {{alerta_cru}})
+- Produz nota com 5 campos obrigatórios
+- Formato padronizado (ALERTA, IMPACTO, HIPÓTESE INICIAL, AÇÃO IMEDIATA, ESCALAR PARA)
+- Contém @handle no campo de escalonamento
+- Conciso (no máximo 8 linhas)
+- Infere impacto, hipótese e ação a partir do alerta cru
