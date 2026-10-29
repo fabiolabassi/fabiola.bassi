@@ -29,7 +29,11 @@ A aplicação roda na porta 8080 e precisa das variáveis de ambiente:
 - DATABASE_URL
 - API_KEY
 
-Seguir boas práticas de criação de imagem Docker para produção em Kubernetes.
+Seguir boas práticas de criação de imagem Docker para produção em Kubernetes, incluindo:
+- Multi-stage build para reduzir tamanho da imagem final
+- Usar usuário não-root para rodar a aplicação (security best practice)
+- NÃO definir valores padrão para variáveis de ambiente sensíveis (DATABASE_URL, API_KEY) no Dockerfile - esses secrets devem ser fornecidos apenas em runtime via Kubernetes secrets/env vars
+- Imagem final otimizada e segura
 
 FORMAT:
 Responder apenas com o conteúdo final do Dockerfile em bloco de código.
