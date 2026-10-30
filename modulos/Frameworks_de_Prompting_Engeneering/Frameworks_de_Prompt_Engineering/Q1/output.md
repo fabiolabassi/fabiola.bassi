@@ -3,19 +3,36 @@
 ## Resposta gerada
 
 ```dockerfile
-FROM python:3.11-slim
+# Stage 1: Builder
+FROM python:3.11-slim AS builder
 
 WORKDIR /app
+
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
 
 COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app.py .
-COPY lib ./lib
+# Stage 2: Runtime
+FROM python:3.11-slim
 
-ENV DATABASE_URL=""
-ENV API_KEY=""
+WORKDIR /app
+
+ENV PATH="/opt/venv/bin:$PATH"
+
+# Copia o ambiente virtual do builder, sem depender de diretórios do root
+COPY --from=builder /opt/venv /opt/venv
+
+# Cria usuário não root para rodar a aplicação
+RUN useradd -m -u 1000 appuser
+
+# Copia o código da aplicação
+COPY --chown=appuser:appuser app.py .
+COPY --chown=appuser:appuser lib ./lib
+
+USER appuser
 
 EXPOSE 8080
 
