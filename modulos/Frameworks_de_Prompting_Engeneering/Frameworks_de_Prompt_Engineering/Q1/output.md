@@ -8,28 +8,29 @@ FROM python:3.11-slim AS builder
 
 WORKDIR /app
 
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
 COPY requirements.txt .
 
-RUN pip install --user --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Stage 2: Runtime
 FROM python:3.11-slim
 
 WORKDIR /app
 
-# Copia apenas os pacotes instalados do builder
-COPY --from=builder /root/.local /root/.local
+ENV PATH="/opt/venv/bin:$PATH"
 
-# Copia o código da aplicação
-COPY app.py .
-COPY lib ./lib
-
-# Adiciona /root/.local/bin ao PATH para que os pacotes instalados sejam encontrados
-ENV PATH=/root/.local/bin:$PATH
+# Copia o ambiente virtual do builder, sem depender de diretórios do root
+COPY --from=builder /opt/venv /opt/venv
 
 # Cria usuário não root para rodar a aplicação
-RUN useradd -m -u 1000 appuser && \
-    chown -R appuser:appuser /app
+RUN useradd -m -u 1000 appuser
+
+# Copia o código da aplicação
+COPY --chown=appuser:appuser app.py .
+COPY --chown=appuser:appuser lib ./lib
 
 USER appuser
 
